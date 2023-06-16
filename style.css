@@ -1,0 +1,351 @@
+:root {
+  --black:           #000000;
+  --midnight-navy:   #2f3c46;
+  --charcoal:        #303030;
+  --slate-grey:      #545454;
+  --strong-blue:     #002d96;
+  --light-blue:      #ccd5ea;
+  --silvermist:      #ccd5ea;
+  --white:           #ffffff;
+
+  --main-font:      'Open Sans', sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: 400;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  color: var(--black);
+  background-color: var(--white);
+  font-family: var(--main-font);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 20px;
+}
+
+.header__logs {
+  display: flex;
+  column-gap: 30px;
+  flex-wrap: wrap;
+  min-width: 250px;
+}
+
+.header__bottom.header__container {
+  padding: 11px 0;
+}
+
+.header__bottom {
+  background-color: var(--midnight-navy);
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacts__info {
+  display: flex;
+  margin-right: 75px;
+}
+
+.contacts__info img {
+  width: 17px;
+  height: 23px;
+}
+
+.contacts__address {
+  margin-left: 8px;
+}
+
+.contacts__address span {
+  display: flex;
+  width: max-content;
+  font-size: 12px;
+  line-height: 14px;
+  font-style: normal;
+  color: var(--slate-grey);
+}
+
+.contacts__tel {
+  display: flex;
+  margin-right: 75px;
+  text-decoration: none;
+  align-items: center;
+  color: var(--charcoal)
+}
+
+.contacts__tel img {
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+}
+
+.contacts__button {
+  display: inline-block;
+  padding: 6px 20px;
+  min-width: 175px;
+  border: 1px solid var(--strong-blue);
+  background-color: transparent;
+  color: var(--strong-blue);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid var(--strong-blue);
+  cursor: pointer;
+}
+
+.model-list,
+.service-options {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.model-list {
+  min-width: 330px;
+}
+
+.service-options {
+  width: 535px;
+}
+
+.model-list__link,
+.service-options__link {
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.promo {
+  padding: 66px 0 25px 0;
+  background-image: url('./img/car-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 734px;
+}
+
+.promo__container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.promo__special-offer {
+  text-align: center;
+}
+
+.promo__special-offer h1 {
+  font-size: 43px;
+  font-weight: 700;
+}
+
+.promo__special-offer p {
+  font-size: 35px;
+}
+
+.promo__special-offer h1,
+.promo__special-offer p {
+  margin: 0;
+  color: var(--white);
+}
+
+.booking {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.booking__paragraph {
+  width: 100%;
+  margin: 0 0 15px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white)
+}
+
+.booking__benefit--installment {
+  color: var(--black);
+  background-color: var(--silvermist);
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.booking__benefit--installment span {
+  font-size: 26px;
+}
+
+.booking__benefit--interest {
+  color: var(--strong-blue);
+  background-color: var(--white);
+  font-size: 50px;
+}
+
+.booking-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 9px;
+  max-width: 675px;
+}
+
+.booking-form__field {
+  margin-right: 16px;
+}
+
+.booking-form__input,
+.booking-form__submit {
+  border: none;
+  padding: 20px 19px;
+  min-width: 330px;
+  font-size: inherit;
+}
+
+.booking-form__input::placeholder {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.booking-form__submit {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--strong-blue);
+  color: var(--white);
+}
+
+.booking-form__checkbox {
+  grid-column: 2/3;
+}
+
+.checkbox {
+  position: relative;
+  display: block;
+  font-size: 11px;
+}
+
+.checkbox__input {
+  position: absolute;
+  top: 1px;
+  left: -2px;
+  width: 13px;
+  height: 13px;
+  margin: 0;
+  opacity: 0;
+}
+
+.checkbox__label {
+  padding-left: 16px;
+}
+
+.checkbox__label:after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: -2px;
+  height: 13px;
+  width: 13px;
+  border: 1px solid var(--white);
+}
+
+.checkbox,
+.checkbox__privacy-link {
+  color: var(--white);
+}
+
+.checkbox__input:focus + .checkbox__label {
+  outline: 2px solid black;
+  outline-offset: 2px;
+}
+
+/* .checkbox__input:focus + .checkbox__label::after {
+  border-color: black;
+} */
+
+.checkbox__input:checked + .checkbox__label::after {
+  background-image: url("./img/checked-icon.svg");
+  background-size: 9px 9px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.car-models {
+  position: relative;
+  padding-top: 118px;
+}
+
+.car-models__container {
+  display: grid;
+  grid-template-columns: 580px 462px;
+}
+
+.car-models__background {
+  position: absolute;
+  left: 0;
+  top: 118px;
+  bottom: 0;
+  width: 50%;
+  min-height: 511px;
+  margin-left: -31px;
+  background-image: url('./img/car-models-bg.png');
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 970px 511px;
+  border-top-right-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
+
+.car-slider {
+  position: relative;
+}
+
+.car-slider__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width: 1140px) {
+  .contacts,
+  .header__bottom{
+    display: none;
+  }
+}

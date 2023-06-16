@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестовое задание</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__container container">
+      <div class="header__logs">
+        <img src="./img/geely-logo.png" width="171" height="24" alt="Логотип GEELY">
+        <img src="./img/rbisauto-logo.png" width="152" height="27" alt="Логотип RBISAUTO">
+
+      </div>
+      <div class="header__contacts contacts">
+        <div class="contacts__info">
+          <img src="./img/location-icon.svg" width="13" height="18" alt="">
+          <address class="contacts__address">
+            <span>GEELY SHYMKENT</span>
+            <span>Тамерлановское шоссе&nbsp;90Б</span>
+          </address>
+        </div>
+
+        <a class="contacts__tel" href="tel:+77780037686">
+          <img src="./img/phone-icon.svg" width="16" height="16" alt="">
+          +7 (778) 003-76-86
+        </a>
+        <button class="contacts__button" type="button">
+          Заказать звонок
+        </button>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="header__container container">
+        <ul class="model-list">
+          <li class="model-list__item">
+            <a href="#" class="model-list__link">COOLRAY</a>
+          </li>
+          <li class="model-list__item">
+            <a href="#" class="model-list__link">AZKARRA</a>
+          </li>
+          <li class="model-list__item">
+            <a href="#" class="model-list__link">TUGELLA</a>
+          </li>
+          <li class="model-list__item">
+            <a href="#" class="model-list__link">MONJARO</a>
+          </li>
+        </ul>
+
+        <ul class="service-options">
+          <li class="service-options__item">
+            <a href="#" class="service-options__link">ПОДБОР КОМПЛЕКТАЦИЙ</a>
+          </li>
+          <li class="service-options__item">
+            <a href="#" class="service-options__link">ТРЕЙД-ИН</a>
+          </li>
+          <li class="service-options__item">
+            <a href="#" class="service-options__link">КРЕДИТ</a>
+          </li>
+          <li class="service-options__item">
+            <a href="#" class="service-options__link">ТЕСТ-ДРАЙВ</a>
+          </li>
+          <li class="service-options__item">
+            <a href="#" class="service-options__link">КОНТАКТЫ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="promo">
+      <div class="promo__container container">
+        <div class="promo__special-offer">
+          <h1>GEELY с выгодой 3 000 000 ₸</h1>
+          <p class="promo__text">Рассрочка на 1 год — <strong>0%</strong></p>
+          <p class="promo__text">Кредит на 2 года ставка — <strong>10%</strong></p>
+        </div>
+
+        <section class="promo__booking booking">
+          <p class="booking__paragraph">Успейте забронировать!</p>
+
+          <form class="booking-form">
+            <div class="booking-form__field">
+              <label class="booking-form__label">
+                <input class="booking-form__input" type="tel" id="phone" name="phone" required placeholder="Номер телефона">
+              </label>
+            </div>
+            <button class="booking-form__submit" type="submit">Получить предложение
+              <img src="./img/right-arrow.png" width="27" height="13" alt="">
+            </button>
+            <div class="booking-form__checkbox">
+              <label class="checkbox">
+                <input class="checkbox__input" type="checkbox" id="privacy-policy" name="privacy-policy" required>
+                <span class="checkbox__label">
+                  Согласен на
+                  <a class="checkbox__privacy-link" href="#">обработку персональных данных</a>
+                </span>
+              </label>
+            </div>
+          </form>
+
+          <div class="booking__benefits">
+            <span class="booking__benefit booking__benefit--installment">
+              <span>Честная</span>
+              рассрочка
+            </span>
+            <span class="booking__benefit booking__benefit--interest">0.01%</span>
+          </div>
+      </section>
+      </div>
+    </section>
+    <section class="car-models">
+      <div class="car-models__background"></div>
+      <div class="car-models__container container">
+        <section class="car-slider">
+          <ul class="car-slider__list">
+            <li>
+              <img src="./img/car-model-1.jpg" width="142" height="118" alt="">
+            </li>
+            <li>
+              <img src="./img/car-model-2.jpg" width="142" height="118" alt="">
+            </li>
+            <li>
+              <img src="./img/car-model-3.jpg" width="142" height="118" alt="">
+            </li>
+          </ul>
+          <img src="./img/model-transporent.png" width="461" height="270" alt="">
+          <div class="car-models__guarantee guarantee">
+            <span class="guarantee__num">6</span>
+            <span class="guarantee__text">лет гарантии</span>
+            <img src="./img/shield.png" width="32" height="39" alt="">
+          </div>
+          <a class="car-models__link" href="#">Подобрать комплектацию</a>
+          <div class="car-models__dots">
+            <!-- Здесь будут точки слайдера -->
+          </div>
+        </section>
+        <section class="car-info">
+          <h2>GEELY COOLRAY</h2>
+          Выгода до 1 800 000 ₸
+
+          Выгода по Трейд-ин
+до 900 000 ₸
+
+Выгода по кредиту
+от 600 000 ₸
+
+Пакет доп.оборудования
+в подарок 300 000 ₸
+<button>Записаться на тест-драйв</button>
+<button>Честная рассрочка 0.01%</button>
+        <button>Узнать цену</button>
+        </section>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
