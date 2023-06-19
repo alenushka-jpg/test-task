@@ -225,7 +225,7 @@ img {
   position: relative;
   width: 100%;
   min-height: 689px;
-  background-image: url('/img/car-background.jpg');
+  background-image: url('../img/car-background.jpg');
   background-color: var(--midnight-navy);
   background-repeat: no-repeat;
   background-size: cover;
@@ -440,7 +440,7 @@ img {
 }
 
 .checkbox__input:checked + .checkbox__label::after {
-  background-image: url("./img/checked-icon.svg");
+  background-image: url("../img/checked-icon.svg");
   background-size: 9px 9px;
   background-repeat: no-repeat;
   background-position: 50%;
@@ -468,7 +468,7 @@ img {
   height: 511px;
   margin-left: -31px;
   background-color: var(--midnight-navy);
-  background-image: url('/img/sloi-mask.png');
+  background-image: url('../img/sloi-mask.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right center;
