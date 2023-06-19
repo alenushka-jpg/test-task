@@ -72,6 +72,7 @@ img {
   display: flex;
   padding: 11px 20px 11px;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .header__bottom {
@@ -224,7 +225,7 @@ img {
   position: relative;
   width: 100%;
   min-height: 689px;
-  background-image: url('./img/car-background.jpg');
+  background-image: url('/img/car-background.jpg');
   background-color: var(--midnight-navy);
   background-repeat: no-repeat;
   background-size: cover;
@@ -467,7 +468,7 @@ img {
   height: 511px;
   margin-left: -31px;
   background-color: var(--midnight-navy);
-  background-image: url('./img/sloi-mask.png');
+  background-image: url('/img/sloi-mask.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right center;
@@ -927,9 +928,14 @@ img {
   padding: 10px 19px 10px;
   font-size: inherit;
   font-family: inherit;
-  border: 1px solid rgba(44,46,63,.3);
+  border: 2px solid rgba(44,46,63,.3);
+  transition: border-color 3s;
   background-color: var(--white);
   color: var(--charcoal);
+}
+
+.modal-window__field input:hover {
+  border-color: var(--slate-steel);
 }
 
 .modal-window__field input::placeholder {
@@ -1224,6 +1230,8 @@ img {
     display: flex;
     justify-content: center;
     justify-content: space-between;
+    width: 100%;
+    align-items: center;
     grid-column: 1/2;
     grid-row: 1/2;
     margin-bottom: 20px;
