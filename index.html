@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -16,11 +19,10 @@
       <div class="header__logs">
         <img src="./img/geely-logo.png" width="171" height="24" alt="Логотип GEELY">
         <img src="./img/rbisauto-logo.png" width="152" height="27" alt="Логотип RBISAUTO">
-
       </div>
       <div class="header__contacts contacts">
         <div class="contacts__info">
-          <img src="./img/location-icon.svg" width="13" height="18" alt="">
+          <img src="./img/location-icon.svg" width="13" height="18" alt="Иконка локации для блока с адресом">
           <address class="contacts__address">
             <span>GEELY SHYMKENT</span>
             <span>Тамерлановское шоссе&nbsp;90Б</span>
@@ -28,16 +30,24 @@
         </div>
 
         <a class="contacts__tel" href="tel:+77780037686">
-          <img src="./img/phone-icon.svg" width="16" height="16" alt="">
-          +7 (778) 003-76-86
+          <img src="./img/phone-icon.svg" width="16" height="16" alt="Иконка телефона для ссылки на номер телефона">
+          + 7 (778) 003-76-86
         </a>
-        <button class="contacts__button" type="button">
+        <button class="contacts__button" type="button" data-fancybox="" data-src="#hidden-content">
           Заказать звонок
         </button>
       </div>
     </div>
-    <div class="header__bottom">
-      <div class="header__container container">
+    <nav class="header__bottom">
+      <button class="header__burger js-nav-burger" type="button">
+        <span class="visually-hidden ">Открыть навигацию</span>
+        <img src="./img/menu-burger.svg" width="48" height="48" alt="Иконка бургера для кнопки открыть навигацию">
+      </button>
+      <button class="header__close" type="button">
+        <span class="visually-hidden">Закрыть навигацию</span>
+        <img src="./img/menu-close.svg" width="48" height="48" alt="Иконка закрыть для кнопки закрыть навигацию">
+      </button>
+      <div class="header__navigation container">
         <ul class="model-list">
           <li class="model-list__item">
             <a href="#" class="model-list__link">COOLRAY</a>
@@ -70,29 +80,79 @@
             <a href="#" class="service-options__link">КОНТАКТЫ</a>
           </li>
         </ul>
+
+        <div class="header__contacts contacts">
+          <div class="contacts__info">
+            <img src="./img/location-icon.svg" width="13" height="18" alt="Иконка локации для блока с адресом">
+            <address class="contacts__address">
+              <span>GEELY SHYMKENT</span>
+              <span>Тамерлановское шоссе&nbsp;90Б</span>
+            </address>
+          </div>
+          <a class="contacts__tel" href="tel:+77780037686">
+            <img src="./img/phone-icon.svg" width="16" height="16" alt="Иконка телефона для ссылки на номер телефона">
+            + 7 (778) 003-76-86
+          </a>
+          <button class="contacts__button" type="button" data-fancybox="" data-src="#hidden-content">
+            Заказать звонок
+          </button>
+        </div>
       </div>
-    </div>
+    </nav>
   </header>
   <main>
     <section class="promo">
       <div class="promo__container container">
-        <div class="promo__special-offer">
-          <h1>GEELY с выгодой 3 000 000 ₸</h1>
-          <p class="promo__text">Рассрочка на 1 год — <strong>0%</strong></p>
-          <p class="promo__text">Кредит на 2 года ставка — <strong>10%</strong></p>
+        <h1 class="visually-hidden">Выгодное предложение GEELY в рассрочку или кредит</h1>
+        <div class="promo__slider">
+          <div class="promo__slide">
+            <h2 class="promo__title">GEELY с выгодой
+              <span>3&nbsp;000&nbsp;000</span>
+              <span>₸</span>
+            </h2>
+            <p class="promo__text">Рассрочка на 1 год — <strong>0%</strong></p>
+            <p class="promo__text">Кредит на 2 года ставка — <strong>10%</strong></p>
+            <p class="promo__text">Кредит на 5 лет ставка — <strong>15.5%</strong></p>
+          </div>
+          <div class="promo__slide">
+            <h2 class="promo__title">Привлекательные предложения на GEELY
+              <span>3&nbsp;000&nbsp;000</span>
+              <span>₸</span>
+            </h2>
+            <p class="promo__text">1 год: <strong>0%</strong> рассрочка</p>
+            <p class="promo__text">2 года: <strong>10%</strong> кредит</p>
+            <p class="promo__text">5 лет: <strong>15.5%</strong> кредит</p>
+          </div>
+          <div class="promo__slide">
+            <h2 class="promo__title">Изысканные GEELY
+              <span>3&nbsp;000&nbsp;000</span>
+              <span>₸</span>
+            </h2>
+            <p class="promo__text">Специальные условия</p>
+            <p class="promo__text">Восхитительные предложения</p>
+            <p class="promo__text">Интересные варианты финансирования</p>
+          </div>
         </div>
-
+        <button class="slick-prev-promo">
+          <span class="visually-hidden">Предыдущий</span>
+          <img src="./img/arrow-slider.svg" width="61" height="61" alt="Иконка стрелки для кнопки предыдущий слайд">
+        </button>
+        <button class="slick-next-promo">
+          <span class="visually-hidden">Следующий</span>
+          <img src="./img/arrow-slider.svg" width="61" height="61" alt="Иконка стрелки для кнопки следующий слайд">
+        </button>
         <section class="promo__booking booking">
+          <h2 class="visually-hidden">Форма бронирования</h2>
           <p class="booking__paragraph">Успейте забронировать!</p>
 
-          <form class="booking-form">
+          <form class="booking-form" action="#" method="POST">
             <div class="booking-form__field">
               <label class="booking-form__label">
-                <input class="booking-form__input" type="tel" id="phone" name="phone" required placeholder="Номер телефона">
+                <input class="booking-form__input" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" type="tel" id="phone" name="phone" required placeholder="Номер телефона">
               </label>
             </div>
             <button class="booking-form__submit" type="submit">Получить предложение
-              <img src="./img/right-arrow.png" width="27" height="13" alt="">
+              <img src="./img/right-arrow.svg" width="27" height="13" alt="Иконка стрелки для кнопки отправки формы получить предложение">
             </button>
             <div class="booking-form__checkbox">
               <label class="checkbox">
@@ -106,11 +166,15 @@
           </form>
 
           <div class="booking__benefits">
-            <span class="booking__benefit booking__benefit--installment">
-              <span>Честная</span>
-              рассрочка
-            </span>
-            <span class="booking__benefit booking__benefit--interest">0.01%</span>
+            <div class="booking__parallelogram">
+              <span class="booking__benefit booking__benefit--installment">
+                <span>Честная</span> <br>
+                рассрочка
+              </span>
+            </div>
+            <div class="booking__parallelogram">
+              <span class="booking__benefit booking__benefit--interest">0.01<span>%</span></span>
+            </div>
           </div>
       </section>
       </div>
@@ -118,48 +182,208 @@
     <section class="car-models">
       <div class="car-models__background"></div>
       <div class="car-models__container container">
+        <h2 class="visually-hidden">Детали выгодного предложения с фотографиями модели машины</h2>
         <section class="car-slider">
-          <ul class="car-slider__list">
-            <li>
-              <img src="./img/car-model-1.jpg" width="142" height="118" alt="">
+          <h3 class="visually-hidden">Слайдер с фотографиями модели машины</h2>
+          <div class="car-slider__slider">
+            <div class="car-slider__slide">
+              <ul class="car-slider__list">
+                <li class="car-slider__item">
+                  <img src="./img/car-red-1.jpeg" width="142" height="118" alt="Фотография модели машины GEELY COOLRAY">
+                </li>
+                <li class="car-slider__item">
+                  <img src="./img/car-red-2.jpeg" width="142" height="118" alt="Фотография модели машины GEELY COOLRAY">
+                </li>
+                <li class="car-slider__item">
+                  <img src="./img/car-red-3.jpeg" width="142" height="118" alt="Фотография модели машины GEELY COOLRAY">
+                </li>
+              </ul>
+            </div>
+            <div class="car-slider__slide">
+              <ul class="car-slider__list">
+                <li class="car-slider__item">
+                  <img src="./img/car-lightgray-1.jpeg" width="142" height="118" alt="Фотография модели машины GEELY COOLRAY">
+                </li>
+                <li class="car-slider__item">
+                  <img src="./img/car-lightgray-2.jpeg" width="142" height="118" alt="Фотография модели машины GEELY COOLRAY">
+                </li>
+                <li class="car-slider__item">
+                  <img src="./img/car-lightgray-3.jpeg" width="142" height="118" alt="Фотография модели машины GEELY COOLRAY">
+                </li>
+              </ul>
+            </div>
+            <div class="car-slider__slide">
+              <ul class="car-slider__list">
+                <li class="car-slider__item">
+                  <img src="./img/car-white-1.jpeg" width="142" height="118" alt="Фотография модели машины GEELY COOLRAY">
+                </li>
+                <li class="car-slider__item">
+                  <img src="./img/car-white-2.jpeg" width="142" height="118" alt="Фотография модели машины GEELY COOLRAY">
+                </li>
+                <li class="car-slider__item">
+                  <img src="./img/car-white-2.jpeg" width="142" height="118" alt="Фотография модели машины GEELY COOLRAY">
+                </li>
+              </ul>
+            </div>
+            <div class="car-slider__slide">
+              <ul class="car-slider__list">
+                <li class="car-slider__item">
+                  <img src="./img/car-lightgray-1.jpeg" width="142" height="118" alt="Фотография модели машины GEELY COOLRAY">
+                </li>
+                <li class="car-slider__item">
+                  <img src="./img/car-darkgray-2.jpeg" width="142" height="118" alt="Фотография модели машины GEELY COOLRAY">
+                </li>
+                <li class="car-slider__item">
+                  <img src="./img/car-darkgray-3.jpeg" width="142" height="118" alt="Фотография модели машины GEELY COOLRAY">
+                </li>
+              </ul>
+            </div>
+            <div class="car-slider__slide">
+              <ul class="car-slider__list">
+                <li class="car-slider__item">
+                  <img src="./img/car-model-1.jpg" width="142" height="118" alt="Фотография модели машины GEELY COOLRAY">
+                </li>
+                <li class="car-slider__item">
+                  <img src="./img/car-model-2.jpg" width="142" height="118" alt="Фотография модели машины GEELY COOLRAY">
+                </li>
+                <li class="car-slider__item">
+                  <img src="./img/car-model-3.jpg" width="142" height="118" alt="Фотография модели машины GEELY COOLRAY">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="car-slider__model-transporent car-transporent">
+            <div class="car-transporent__slider">
+              <div class="car-transporent__slide">
+                <img src="./img/transporent-car-red.png" width="461" height="270" alt="Фотография модели машины GEELY COOLRAY">
+              </div>
+              <div class="car-transporent__slide">
+                <img src="./img/transporent-car-gray.png" width="461" height="270" alt="Фотография модели машины GEELY COOLRAY">
+              </div>
+              <div class="car-transporent__slide">
+                <img src="./img/transporent-car-white.png" width="461" height="270" alt="Фотография модели машины GEELY COOLRAY">
+              </div>
+              <div class="car-transporent__slide">
+                <img src="./img/transporent-car-darkgray.png" width="461" height="270" alt="Фотография модели машины GEELY COOLRAY">
+              </div>
+              <div class="car-transporent__slide">
+                <img src="./img/model-transporent.png" width="461" height="270" alt="Фотография модели машины GEELY COOLRAY">
+              </div>
+            </div>
+          </div>
+          <button class="slick-prev-model">
+            <span class="visually-hidden">Предыдущий</span>
+            <img src="./img/right-chevron.svg" width="30" height="30" alt="Иконка стрелки для кнопки предыдущий слайд">
+          </button>
+          <button class="slick-next-model">
+            <span class="visually-hidden">Следующий</span>
+            <img src="./img/right-chevron.svg" width="30" height="30" alt="Иконка стрелки для кнопки следующий слайд">
+          </button>
+          <div class="car-slider__dots">
+            <ol class="slider-dots">
+              <li class="slider-dots__item">
+                <button class="slider-dots__button" type="button" aria-label="Перейти к первому слайду"></button>
+              </li>
+              <li class="slider-dots__item">
+                <button class="slider-dots__button" type="button" aria-label="Перейти ко второму слайду"></button>
+              </li>
+              <li class="slider-dots__item">
+                <button class="slider-dots__button" type="button" aria-label="Перейти к третьему слайду"></button>
+              </li>
+              <li class="slider-dots__item">
+                <button class="slider-dots__button" type="button" aria-label="Перейти к четвертому слайду"></button>
+              </li>
+              <li class="slider-dots__item">
+                <button class="slider-dots__button slider-dots__button--active" type="button" aria-label="Перейти к пятому слайду"></button>
+              </li>
+            </ol>
+          </div>
+          <div class="guarantee">
+            <span class="guarantee__num">6</span>
+            <span class="guarantee__text">лет <br> гарантии</span>
+            <img src="./img/shield.png" width="32" height="39" alt="Иконка щит">
+          </div>
+          <a class="car-slider__link" href="#">
+            Подобрать комплектацию
+            <img src="./img/right-arrow.svg" width="27" height="13" alt="Иконка стрелки для кнопки подобрать комплектацию">
+          </a>
+        </section>
+        <section class="car-details">
+          <h2 class="car-details__title">GEELY <span>COOLRAY</span></h2>
+          <div class="car-details__parallelogram">
+            <span class="car-details__benefit">Выгода до
+              <span>1 800 000 </span>₸
+            </span>
+          </div>
+          <ul class="car-details__list">
+            <li class="car-details__item">
+              <img src="./img/refresh.png" width="38" height="38" alt="Иконка обновляемость">
+              <span class="car-details__description">
+                Выгода по Трейд-ин <br> до
+                <span>900 000</span>
+                <span>₸</span>
+              </span>
             </li>
-            <li>
-              <img src="./img/car-model-2.jpg" width="142" height="118" alt="">
+            <li class="car-details__item">
+              <img src="./img/credit-card.png" width="43" height="31" alt="Иконка кредитной карты">
+              <span class="car-details__description">
+                Выгода по кредиту <br> от
+                <span>600 000</span>
+                <span>₸</span>
+              </span>
             </li>
-            <li>
-              <img src="./img/car-model-3.jpg" width="142" height="118" alt="">
+            <li class="car-details__item">
+              <img src="./img/present.png" width="43" height="43" alt="Иконка подарка">
+              <span class="car-details__description">
+                Пакет доп.оборудования <br>
+                в&nbsp;подарок
+                <span>300 000</span>
+                <span>₸</span>
+              </span>
             </li>
           </ul>
-          <img src="./img/model-transporent.png" width="461" height="270" alt="">
-          <div class="car-models__guarantee guarantee">
-            <span class="guarantee__num">6</span>
-            <span class="guarantee__text">лет гарантии</span>
-            <img src="./img/shield.png" width="32" height="39" alt="">
-          </div>
-          <a class="car-models__link" href="#">Подобрать комплектацию</a>
-          <div class="car-models__dots">
-            <!-- Здесь будут точки слайдера -->
-          </div>
-        </section>
-        <section class="car-info">
-          <h2>GEELY COOLRAY</h2>
-          Выгода до 1 800 000 ₸
-
-          Выгода по Трейд-ин
-до 900 000 ₸
-
-Выгода по кредиту
-от 600 000 ₸
-
-Пакет доп.оборудования
-в подарок 300 000 ₸
-<button>Записаться на тест-драйв</button>
-<button>Честная рассрочка 0.01%</button>
-        <button>Узнать цену</button>
+          <button class="button car-details__button js-button-testdrive" type="button" data-fancybox="" data-src="#hidden-content"                                   >
+            Записаться на тест-драйв
+            <img src="./img/right-arrow.svg" width="27" height="13" alt="Иконка стрелки для кнопки Записаться на тест драйв">
+          </button>
+          <button class="button car-details__button js-button-credit" type="button" data-fancybox="" data-src="#hidden-content">
+            Честная рассрочка <span>0.01%</span>
+            <img src="./img/right-arrow.svg" width="27" height="13" alt="Иконка стрелки для кнопки Честная рассрочка">
+          </button>
+          <button class="button car-details__button js-button-price" type="button" data-fancybox="" data-src="#hidden-content">
+            Узнать цену
+            <img src="./img/right-arrow.svg" width="27" height="13" alt="Иконка стрелки для кнопки узнать цену">
+          </button>
         </section>
       </div>
     </section>
-
+    <section class="modal-window" id="hidden-content">
+      <div class="overlay"></div>
+      <div class="modal-window__container">
+        <h3>Закажите звонок</h3>
+        <form class="modal-window__form" action="#" method="POST">
+          <div class="modal-window__field">
+            <label>
+              <input type="text" name="name" required placeholder="Ваше имя:">
+            </label>
+          </div>
+          <div class="modal-window__field">
+            <label>
+              <input type="tel" name="phone" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required placeholder="Ваш номер телефона:">
+            </label>
+          </div>
+          <button class="modal-window__submit" type="submit">Отправить</button>
+        </form>
+        <button class="modal-window__close" type="button">
+          <span class="visually-hidden">Закрыть модальное окно</span>
+          <img  src="./img/icon-close.svg" width="22" height="22" alt="Иконка крестик для кнопки закрыть модальное окно">
+        </button>
+      </div>
+    </section>
   </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <script src="./main.js"></script>
 </body>
 </html>
