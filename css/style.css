@@ -783,7 +783,8 @@ img {
 .car-details__button:nth-of-type(3n) {
   background-color: var(--strong-blue);
   transition: background-color 0.3s;
-  color: var(--white)
+  color: var(--white);
+  padding: 13px 28px 16px 36px;
 }
 
 .car-details__button:nth-of-type(3n):hover {
